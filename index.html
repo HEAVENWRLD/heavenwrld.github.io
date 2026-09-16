@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Tools - Mobile Apps</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text: #0f172a;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            line-height: 1.5;
+        }
+
+        header {
+            background: var(--card-bg);
+            border-bottom: 1px solid var(--border);
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+            color: var(--text);
+        }
+
+        header p {
+            margin: 0.5rem 0 0;
+            color: var(--text-muted);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .apps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .app-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .app-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+        }
+
+        .app-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .app-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 14px;
+            background: var(--border);
+            object-fit: cover;
+        }
+
+        .app-title {
+            margin: 0;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .app-category {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .app-description {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .store-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-align: center;
+            flex: 1;
+            min-width: 110px;
+        }
+
+        .btn-amazon {
+            background-color: #ff9900;
+            color: #111;
+        }
+
+        .btn-apkpure {
+            background-color: #11ab7c;
+            color: #fff;
+        }
+
+        .btn-google {
+            background-color: #01875f;
+            color: #fff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem 1rem 2rem;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border);
+            margin-top: 3rem;
+        }
+
+        footer a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Quantum Tools</h1>
+        <p>Utility and AI Mobile Applications</p>
+    </header>
+
+    <div class="container">
+        <div class="apps-grid">
+            
+            <!-- APP CARD 1 -->
+            <div class="app-card">
+                <div>
+                    <div class="app-header">
+                        <img src="applogo 114x114.png" alt="App Icon" class="app-icon">
+                        <div>
+                            <h2 class="app-title">Quantum AI: Speech to Text</h2>
+                            <span class="app-category">Productivity / Tools</span>
+                        </div>
+                    </div>
+                    <p class="app-description">High-accuracy offline speech-to-text conversion and language translation powered by AI.</p>
+                </div>
+                <div class="store-buttons">
+                    <a href="https://www.amazon.com/dp/B0HFQMCSQ6" class="btn btn-amazon" target="_blank">Amazon Store</a>
+                    <!-- <a href="https://apkpure.com/your-app" class="btn btn-apkpure" target="_blank">APKPure</a> -->
+                </div>
+            </div>
+
+            <!-- APP CARD 2 (Template for Next App) -->
+            <!-- <div class="app-card">
+                <div>
+                    <div class="app-header">
+                        <img src="https://via.placeholder.com/64" alt="App Icon" class="app-icon">
+                        <div>
+                            <h2 class="app-title">Launcher & Wallpaper</h2>
+                            <span class="app-category">Personalization</span>
+                        </div>
+                    </div>
+                    <p class="app-description">Fast, lightweight launcher and custom HD wallpapers for mobile devices.</p>
+                </div>
+                <div class="store-buttons">
+                    <a href="#" class="btn btn-amazon" target="_blank">Amazon Store</a>
+                </div>
+            </div> -->
+
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Quantum Tools. All rights reserved. | <a href="https://heavenwrld.github.io/quantum-tools-site/app-ads.txt">app-ads.txt</a></p>
+    </footer>
+
+</body>
+</html>
