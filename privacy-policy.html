@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark light">
+  <meta name="description" content="Privacy policy for mobile applications published by QuantumSoftwares and presented on Quantum Tools.">
+  <meta name="robots" content="index,follow">
+  <title>Privacy Policy — QuantumSoftwares</title>
+  <style>
+    :root {
+      --bg: #080d1b;
+      --panel: rgba(15, 24, 45, .82);
+      --panel-solid: #101a30;
+      --panel-soft: #111f38;
+      --text: #edf4ff;
+      --muted: #a8b7ce;
+      --line: rgba(161, 187, 228, .16);
+      --cyan: #62e8f2;
+      --purple: #b69cff;
+      --link: #91f0f6;
+      --shadow: 0 24px 70px rgba(0,0,0,.28);
+      --radius: 24px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 92px; }
+    body {
+      margin: 0;
+      color: var(--text);
+      background:
+        radial-gradient(ellipse at 12% 0%, rgba(46, 188, 219, .13), transparent 32rem),
+        radial-gradient(ellipse at 92% 10%, rgba(145, 105, 255, .16), transparent 34rem),
+        var(--bg);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.72;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    a { color: var(--link); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    a:hover { color: #fff; }
+    a:focus-visible { outline: 3px solid var(--cyan); outline-offset: 3px; border-radius: 5px; }
+    .topbar {
+      position: sticky; top: 0; z-index: 10;
+      border-bottom: 1px solid var(--line);
+      background: rgba(8, 13, 27, .8);
+      backdrop-filter: blur(18px);
+    }
+    .nav {
+      max-width: 1160px; margin: 0 auto; padding: 15px 24px;
+      display: flex; align-items: center; justify-content: space-between; gap: 18px;
+    }
+    .brand { display: inline-flex; gap: 11px; align-items: center; color: var(--text); text-decoration: none; font-weight: 800; letter-spacing: .11em; font-size: .84rem; }
+    .brand-mark {
+      width: 35px; height: 35px; display: grid; place-items: center; border-radius: 12px;
+      border: 1px solid rgba(98,232,242,.6); color: var(--cyan);
+      background: linear-gradient(145deg, rgba(98,232,242,.15), rgba(182,156,255,.12));
+      box-shadow: inset 0 0 22px rgba(98,232,242,.06);
+      font-weight: 900; letter-spacing: 0;
+    }
+    .nav-link { font-size: .91rem; color: var(--muted); text-decoration: none; }
+    .nav-link:hover { color: var(--text); }
+    .wrap { max-width: 1160px; margin: 0 auto; padding: 42px 24px 78px; }
+    .hero {
+      position: relative; overflow: hidden; padding: clamp(28px, 5vw, 58px);
+      border: 1px solid rgba(98,232,242,.22); border-radius: 30px;
+      background: linear-gradient(135deg, rgba(17,31,56,.96), rgba(18,22,47,.88));
+      box-shadow: var(--shadow);
+    }
+    .hero:after {
+      content: ""; position: absolute; width: 260px; height: 260px; border-radius: 50%;
+      right: -80px; top: -110px; border: 1px solid rgba(98,232,242,.22);
+      box-shadow: 0 0 0 24px rgba(98,232,242,.025), 0 0 0 52px rgba(182,156,255,.025);
+      pointer-events: none;
+    }
+    .eyebrow { color: var(--cyan); font-size: .74rem; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; }
+    h1 { margin: 13px 0 14px; max-width: 760px; font-size: clamp(2.4rem, 6vw, 4.45rem); line-height: 1.04; letter-spacing: -.055em; }
+    .hero p { max-width: 700px; margin: 0; color: #c0cee2; font-size: clamp(1rem, 2vw, 1.13rem); }
+    .meta-row { margin-top: 26px; display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
+    .pill { display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; border: 1px solid var(--line); border-radius: 999px; color: #dce9fb; background: rgba(7,14,29,.38); font-size: .82rem; }
+    .pill-dot { width: 7px; height: 7px; background: var(--cyan); border-radius: 50%; box-shadow: 0 0 12px rgba(98,232,242,.75); }
+    .intro-grid { display: grid; grid-template-columns: minmax(0, 1fr) 280px; gap: 22px; margin-top: 24px; align-items: start; }
+    .card { border: 1px solid var(--line); border-radius: var(--radius); background: var(--panel); box-shadow: 0 12px 40px rgba(0,0,0,.12); }
+    .notice { padding: 23px 25px; }
+    .notice-heading { display: flex; gap: 12px; align-items: flex-start; }
+    .notice-icon { flex: 0 0 38px; height: 38px; border-radius: 13px; display: grid; place-items: center; color: var(--cyan); background: rgba(98,232,242,.1); border: 1px solid rgba(98,232,242,.2); font-weight: 900; }
+    .notice h2, .toc h2 { margin: 0 0 6px; font-size: 1.08rem; letter-spacing: -.015em; }
+    .notice p { margin: 0; color: var(--muted); font-size: .94rem; }
+    .toc { padding: 21px; }
+    .toc h2 { margin-bottom: 12px; }
+    .toc ol { margin: 0; padding-left: 21px; color: var(--muted); font-size: .9rem; }
+    .toc li { padding: 4px 0; }
+    .toc a { color: #c6d4e9; text-decoration: none; }
+    .toc a:hover { color: var(--cyan); }
+    .content-grid { display: grid; grid-template-columns: minmax(0, 1fr) 280px; gap: 22px; align-items: start; margin-top: 24px; }
+    main { min-width: 0; }
+    .section { padding: clamp(22px, 3.5vw, 34px); margin-bottom: 16px; border: 1px solid var(--line); border-radius: var(--radius); background: rgba(14, 22, 41, .76); }
+    .section-head { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 17px; }
+    .number { flex: 0 0 38px; height: 38px; display: grid; place-items: center; border-radius: 12px; color: var(--cyan); background: rgba(98,232,242,.08); border: 1px solid rgba(98,232,242,.22); font-size: .86rem; font-weight: 800; }
+    h2 { margin: 0; font-size: clamp(1.25rem, 2.5vw, 1.65rem); line-height: 1.28; letter-spacing: -.03em; }
+    h3 { margin: 22px 0 7px; font-size: 1.03rem; color: #e6efff; }
+    p { margin: 0 0 13px; color: #c0cde0; }
+    p:last-child { margin-bottom: 0; }
+    ul { padding-left: 22px; margin: 10px 0 15px; color: #c0cde0; }
+    li { padding: 3px 0 3px 3px; }
+    strong { color: #f3f7ff; font-weight: 700; }
+    .subcard { margin: 15px 0; padding: 16px 18px; border-radius: 16px; background: rgba(98,232,242,.055); border: 1px solid rgba(98,232,242,.13); }
+    .subcard p { font-size: .94rem; }
+    .vendor-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: 15px; }
+    .vendor { padding: 13px 14px; border: 1px solid var(--line); border-radius: 14px; background: rgba(255,255,255,.018); min-width: 0; }
+    .vendor strong { display: block; font-size: .94rem; margin-bottom: 2px; }
+    .vendor span { color: var(--muted); display: block; font-size: .82rem; overflow-wrap: anywhere; }
+    aside .side-card { position: sticky; top: 86px; padding: 21px; }
+    .side-card h2 { font-size: 1.05rem; margin-bottom: 11px; }
+    .side-card p { font-size: .9rem; }
+    .side-card .contact-link { display: block; margin-top: 10px; overflow-wrap: anywhere; font-weight: 700; }
+    .last-note { color: #92a4be; font-size: .86rem; }
+    footer { border-top: 1px solid var(--line); margin-top: 28px; padding-top: 26px; display: flex; gap: 18px; flex-wrap: wrap; align-items: center; justify-content: space-between; color: #8192ac; font-size: .86rem; }
+    footer a { color: #aebed4; text-decoration: none; }
+    .footer-links { display: flex; gap: 16px; flex-wrap: wrap; }
+    @media (max-width: 860px) {
+      .intro-grid, .content-grid { grid-template-columns: 1fr; }
+      .toc { order: -1; }
+      .toc ol { columns: 2; column-gap: 24px; }
+      aside .side-card { position: static; }
+    }
+    @media (max-width: 560px) {
+      .nav { padding: 12px 17px; }
+      .wrap { padding: 22px 14px 48px; }
+      .hero { border-radius: 23px; }
+      .toc ol { columns: 1; }
+      .vendor-list { grid-template-columns: 1fr; }
+      .section { border-radius: 20px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { animation: none !important; transition: none !important; } }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="https://heavenwrld.github.io/" aria-label="Quantum Tools home">
+        <span class="brand-mark" aria-hidden="true">Q</span>
+        <span>QUANTUM TOOLS</span>
+      </a>
+      <a class="nav-link" href="https://heavenwrld.github.io/">Developer website ↗</a>
+    </nav>
+  </header>
+
+  <div class="wrap">
+    <section class="hero" aria-labelledby="page-title">
+      <div class="eyebrow">Transparency · Data · Choice</div>
+      <h1 id="page-title">Privacy, explained clearly.</h1>
+      <p>This policy describes how QuantumSoftwares handles information across its mobile applications, including information processed by advertising, analytics, transcription, translation and other services when those features are enabled.</p>
+      <div class="meta-row">
+        <span class="pill"><span class="pill-dot" aria-hidden="true"></span> Privacy Policy</span>
+        <span class="pill">Last updated: 9 October 2026</span>
+      </div>
+    </section>
+
+    <div class="intro-grid">
+      <section class="card notice" aria-labelledby="scope-heading">
+        <div class="notice-heading">
+          <div class="notice-icon" aria-hidden="true">i</div>
+          <div>
+            <h2 id="scope-heading">One policy, different apps</h2>
+            <p>QuantumSoftwares publishes multiple apps. The precise data handled depends on the app, features you use, permissions you grant, SDKs enabled in that version, and your region. An app may provide additional notices in its store listing or inside the app.</p>
+          </div>
+        </div>
+      </section>
+      <nav class="card toc" aria-label="On this page">
+        <h2>On this page</h2>
+        <ol>
+          <li><a href="#scope">Scope</a></li>
+          <li><a href="#information">Information handled</a></li>
+          <li><a href="#use">How information is used</a></li>
+          <li><a href="#advertising">Ads and third parties</a></li>
+          <li><a href="#consent">Consent and choices</a></li>
+          <li><a href="#content">Audio, text and files</a></li>
+          <li><a href="#retention">Retention and security</a></li>
+          <li><a href="#rights">Privacy rights</a></li>
+          <li><a href="#children">Children's privacy</a></li>
+          <li><a href="#changes">Changes and contact</a></li>
+        </ol>
+      </nav>
+    </div>
+
+    <div class="content-grid">
+      <main>
+        <section class="section" id="scope">
+          <div class="section-head"><span class="number">01</span><h2>Scope of this policy</h2></div>
+          <p>This Privacy Policy applies to mobile applications developed, published or maintained by QuantumSoftwares and distributed through Google Play, Amazon Appstore or other official distribution channels. The apps are presented through our developer website, <a href="https://heavenwrld.github.io/">heavenwrld.github.io</a>.</p>
+          <p>In this policy, “QuantumSoftwares,” “we,” “us” and “our” refer to the publisher responsible for the relevant app. Third-party services operate under their own privacy policies. If an individual app provides a more specific privacy notice, please read that notice together with this policy.</p>
+        </section>
+
+        <section class="section" id="information">
+          <div class="section-head"><span class="number">02</span><h2>Information that may be handled</h2></div>
+          <p>The information involved varies by app and feature. Depending on the configuration and the permissions you grant, the categories may include:</p>
+          <h3>Device and advertising identifiers</h3>
+          <p>Advertising ID where available and permitted by your device settings, app or installation identifiers, device brand and model, operating-system version, system language, app version and related technical signals. Some identifiers may be used by a service to measure advertising, limit repeated ads, protect against fraud or troubleshoot delivery.</p>
+          <h3>Network and approximate location</h3>
+          <p>IP address, network connection type (such as Wi-Fi or cellular), and information about requests made to an app's services. Advertising or analytics partners may estimate a general area, such as a country or city, from an IP address. This is not the same as precise GPS location. If an individual app needs device location for a feature, that use should be explained in that app and controlled through the device's permission settings.</p>
+          <h3>Advertising activity and diagnostics</h3>
+          <p>Ad impressions, clicks, ad format, performance signals, crash reports and diagnostic logs may be processed by us or relevant advertising, mediation or analytics providers.</p>
+          <h3>Information you choose to provide</h3>
+          <p>If you contact support, we receive the information you include in your message, such as your email address, app details and description of the issue.</p>
+          <div class="subcard"><p><strong>Audio, text, images and other content.</strong> Apps with speech, AI, camera, image or file features may process content locally on your device, send it to a server operated by us, or pass it to a third-party service needed to provide the feature you choose. The exact processing path depends on the app and mode you select. See <a href="#content">Audio, text and files</a> below.</p></div>
+        </section>
+
+        <section class="section" id="use">
+          <div class="section-head"><span class="number">03</span><h2>How information is used</h2></div>
+          <p>Depending on the app and services enabled, information may be used to:</p>
+          <ul>
+            <li>Provide and operate app features you request, including transcription, translation, file handling and other utilities.</li>
+            <li>Serve contextual or personalized advertising where permitted and consistent with your consent and settings.</li>
+            <li>Measure ad delivery and performance, limit repetitive ads and help detect invalid traffic or advertising fraud.</li>
+            <li>Maintain reliability, diagnose crashes, protect services against misuse and improve performance.</li>
+            <li>Respond to support requests and meet applicable legal or platform requirements.</li>
+          </ul>
+          <p>We do not describe data collection as identical across all apps: only the categories relevant to the app, its enabled SDKs and its features apply.</p>
+        </section>
+
+        <section class="section" id="advertising">
+          <div class="section-head"><span class="number">04</span><h2>Advertising and third-party services</h2></div>
+          <p>Some apps use Appodeal for advertising mediation. Appodeal and the ad networks enabled for an app may receive technical data, IP address, advertising identifiers and ad-interaction signals to request, deliver, measure and protect advertising services. The providers enabled can vary by app, app version, country and mediation configuration.</p>
+          <div class="vendor-list">
+            <div class="vendor"><strong>Appodeal / Stack</strong><span><a href="https://www.appodeal.com/privacy-policy" target="_blank" rel="noopener noreferrer">Appodeal Privacy Policy ↗</a></span></div>
+            <div class="vendor"><strong>Google / AdMob</strong><span><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy ↗</a></span></div>
+            <div class="vendor"><strong>AppLovin</strong><span><a href="https://legal.applovin.com/privacy/" target="_blank" rel="noopener noreferrer">AppLovin Privacy Policy ↗</a></span></div>
+            <div class="vendor"><strong>BIGO Ads</strong><span><a href="https://bigoads.com/privacy" target="_blank" rel="noopener noreferrer">BIGO Ads Privacy Policy ↗</a></span></div>
+            <div class="vendor"><strong>Mintegral</strong><span><a href="https://www.mintegral.com/en/privacy" target="_blank" rel="noopener noreferrer">Mintegral Privacy Policy ↗</a></span></div>
+            <div class="vendor"><strong>Meta</strong><span><a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener noreferrer">Meta Privacy Policy ↗</a></span></div>
+            <div class="vendor"><strong>Start.io</strong><span><a href="https://www.start.io/policy/privacy-policy/" target="_blank" rel="noopener noreferrer">Start.io Privacy Policy ↗</a></span></div>
+            <div class="vendor"><strong>Unity</strong><span><a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" target="_blank" rel="noopener noreferrer">Unity Privacy Policy ↗</a></span></div>
+            <div class="vendor"><strong>Liftoff / Vungle</strong><span><a href="https://www.liftoff.ai/privacy-policy/" target="_blank" rel="noopener noreferrer">Liftoff Privacy Policy ↗</a></span></div>
+            <div class="vendor"><strong>BidMachine</strong><span><a href="https://bidmachine.io/privacy-policy/" target="_blank" rel="noopener noreferrer">BidMachine Privacy Policy ↗</a></span></div>
+          </div>
+          <p style="margin-top:16px">Only providers used by the particular app are relevant. Other advertising or service partners may be enabled in some app builds. Please refer to the relevant app's current configuration and disclosures for the applicable partners.</p>
+        </section>
+
+        <section class="section" id="consent">
+          <div class="section-head"><span class="number">05</span><h2>Consent, advertising choices and privacy controls</h2></div>
+          <p>Where required, an app may use a consent-management tool, such as Appodeal Stack Consent Manager, to present privacy choices and communicate consent signals to participating ad providers. Whether a consent form appears depends on your region, the app's SDK version and configuration, and your existing consent status. The available choices may differ by app and provider.</p>
+          <p>You can also review your device's privacy and advertising settings. Changing or resetting an advertising identifier, where the operating system offers that control, may affect personalization or measurement. Opting out of personalized ads does not necessarily remove all advertising; contextual ads may still appear.</p>
+          <p>Where applicable law provides additional rights or opt-out choices, the app or relevant provider should make the appropriate mechanism available. If a privacy-options control is presented inside an app, use that control to revisit your choices.</p>
+        </section>
+
+        <section class="section" id="content">
+          <div class="section-head"><span class="number">06</span><h2>Audio, text, files and cloud features</h2></div>
+          <p>Apps offering transcription, translation, AI, camera or file features may process the content you choose to provide. Some processing may happen on the device. When you select a cloud or third-party-powered mode, relevant audio, text, images or file content may be sent to the service required to perform that request.</p>
+          <p>For example, a transcription or translation feature may send an audio recording or transcript to the configured cloud provider to generate text or a translation. The provider may process information under its own terms and privacy policy. Which provider is used depends on the app and mode selected.</p>
+          <p>Please avoid submitting passwords, payment-card information or other sensitive content unless the feature is designed for that purpose and you are comfortable with the stated processing. For exact details about a specific app or mode, consult the app's in-app explanations and applicable service-provider policies.</p>
+        </section>
+
+        <section class="section" id="retention">
+          <div class="section-head"><span class="number">07</span><h2>Data retention and security</h2></div>
+          <p>Retention periods vary according to the app feature, the purpose for processing, and the service provider involved. Information may be retained for as long as needed to provide a requested service, maintain security, resolve support issues or meet legal obligations. Third-party providers set their own retention practices under their policies.</p>
+          <p>We use reasonable measures appropriate to the app and services to protect information. No method of storage or transmission is completely secure, and we cannot guarantee absolute security.</p>
+        </section>
+
+        <section class="section" id="rights">
+          <div class="section-head"><span class="number">08</span><h2>Your privacy rights</h2></div>
+          <p>Depending on where you live and the laws that apply, you may have rights to request access to, correction of or deletion of certain personal information, to object to or restrict some processing, or to withdraw consent where processing is based on consent.</p>
+          <p>To ask about information handled directly by QuantumSoftwares, contact us using the details below. If the information was collected by an advertising or other third-party service, you may also need to submit the request to that provider through its privacy policy or privacy-request process.</p>
+        </section>
+
+        <section class="section" id="children">
+          <div class="section-head"><span class="number">09</span><h2>Children's privacy</h2></div>
+          <p>Unless an app's store listing or app-specific notice states otherwise, our apps are not intended for children under 13 and are not designed to knowingly collect personal information from children under 13. Where a specific app is intended for children or is subject to additional child-protection requirements, separate app-specific requirements and disclosures apply.</p>
+          <p>If you believe a child has provided personal information to us inappropriately, please contact us so we can review the request.</p>
+        </section>
+
+        <section class="section" id="changes">
+          <div class="section-head"><span class="number">10</span><h2>Changes to this policy</h2></div>
+          <p>We may update this policy when apps, SDKs, services or legal requirements change. When we do, we will update the date at the top of this page. Please review this page periodically and check any app-specific notices for further information.</p>
+          <p class="last-note">This is a general privacy notice for multiple applications, not a guarantee that every listed service is active in every app. The app publisher should keep these disclosures aligned with the SDKs, permissions, data flows and privacy controls actually used in each released version.</p>
+        </section>
+      </main>
+
+      <aside>
+        <div class="card side-card">
+          <h2>Questions about privacy?</h2>
+          <p>For questions about QuantumSoftwares apps or this policy, contact us by email. Include the app name and enough detail for us to understand your request; please do not send passwords or other secrets.</p>
+          <a class="contact-link" href="mailto:quantumsoftwares9@gmail.com">quantumsoftwares9@gmail.com</a>
+          <a class="contact-link" href="https://heavenwrld.github.io/">Developer website ↗</a>
+          <div style="height:1px;background:var(--line);margin:20px 0"></div>
+          <h2>Third-party notice</h2>
+          <p>Advertising and cloud providers may process some information independently under their own privacy terms. Review the provider links in the relevant sections above.</p>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      <span>© 2026 QuantumSoftwares · Mobile software</span>
+      <div class="footer-links">
+        <a href="https://heavenwrld.github.io/">Home</a>
+        <a href="https://www.appodeal.com/privacy-policy" target="_blank" rel="noopener noreferrer">Appodeal Privacy</a>
+        <a href="mailto:quantumsoftwares9@gmail.com">Contact</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
