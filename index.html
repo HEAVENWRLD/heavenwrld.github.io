@@ -1409,7 +1409,7 @@
             return card;
         });
 
-        if (cards.length) grid.replaceChildren.apply(grid, cards);
+        grid.replaceChildren.apply(grid, cards);
     } catch (error) {
         // Keep the embedded cards as a graceful fallback if the catalogue is offline.
         console.warn('Quantum Softwares app catalogue could not be refreshed:', error);
