@@ -1311,5 +1311,111 @@
 </footer>
 ```
 
+
+<script id="NEXORA_SHARED_APP_CATALOG">
+(async function renderPublishedAppsFromCatalog() {
+    const grid = document.querySelector('.apps-grid');
+    if (!grid) return;
+
+    const makeElement = function (tag, className, text) {
+        const element = document.createElement(tag);
+        if (className) element.className = className;
+        if (text !== undefined && text !== null) element.textContent = String(text);
+        return element;
+    };
+
+    const iconForStore = function (name) {
+        const normalized = String(name || '').toLowerCase();
+        if (normalized.includes('amazon')) return 'A';
+        if (normalized.includes('google')) return '▶';
+        if (normalized.includes('apk')) return '↓';
+        return '↗';
+    };
+
+    try {
+        const response = await fetch('./apps.json', { cache: 'no-store' });
+        if (!response.ok) throw new Error('Catalogue request failed: ' + response.status);
+        const apps = await response.json();
+        if (!Array.isArray(apps)) throw new Error('The app catalogue must be a JSON array.');
+
+        const cards = apps.filter(function (app) {
+            return app && typeof app.id === 'string'
+                && typeof app.name === 'string'
+                && typeof app.description === 'string';
+        }).map(function (app) {
+            const card = makeElement('article', 'app-card');
+            const top = makeElement('div', 'app-top');
+            const iconWrap = makeElement('div', 'app-icon-wrap');
+            if (typeof app.icon === 'string' && app.icon.trim()) {
+                const image = makeElement('img', 'app-icon');
+                image.src = new URL(app.icon, window.location.href).href;
+                image.alt = app.name + ' icon';
+                iconWrap.appendChild(image);
+            } else {
+                iconWrap.appendChild(makeElement('div', 'app-icon', app.name.slice(0, 1)));
+            }
+            top.appendChild(iconWrap);
+
+            const statusText = app.status || 'Coming Soon';
+            const isAvailable = String(statusText).toLowerCase() === 'available';
+            const status = makeElement('div', 'status ' + (isAvailable ? 'status-live' : 'status-coming'));
+            status.appendChild(makeElement('span', 'status-dot'));
+            status.appendChild(document.createTextNode(statusText));
+            top.appendChild(status);
+            card.appendChild(top);
+
+            const info = makeElement('div', 'app-info');
+            info.appendChild(makeElement('h3', 'app-title', app.name));
+            if (app.category) info.appendChild(makeElement('span', 'app-category', app.category));
+            info.appendChild(makeElement('p', 'app-description', app.description));
+
+            if (Array.isArray(app.features) && app.features.length) {
+                const features = makeElement('div', 'features');
+                app.features.forEach(function (feature) {
+                    features.appendChild(makeElement('span', 'feature', feature));
+                });
+                info.appendChild(features);
+            }
+            card.appendChild(info);
+
+            const download = makeElement('div', 'download-area');
+            download.appendChild(makeElement('div', 'download-title', 'Download'));
+            const storeButtons = makeElement('div', 'store-buttons');
+
+            (Array.isArray(app.stores) ? app.stores : []).forEach(function (store) {
+                if (!store || typeof store.name !== 'string') return;
+                if (store.available && typeof store.url === 'string' && /^https:\/\//i.test(store.url)) {
+                    const link = makeElement('a', 'store-btn amazon');
+                    link.href = store.url;
+                    link.target = '_blank';
+                    link.rel = 'noopener noreferrer';
+                    link.appendChild(makeElement('span', 'store-icon', iconForStore(store.name)));
+                    link.appendChild(document.createTextNode(store.name));
+                    storeButtons.appendChild(link);
+                } else {
+                    const unavailable = makeElement('span', 'store-btn disabled');
+                    unavailable.setAttribute('aria-disabled', 'true');
+                    unavailable.appendChild(makeElement('span', 'store-icon', iconForStore(store.name)));
+                    unavailable.appendChild(document.createTextNode(store.name));
+                    storeButtons.appendChild(unavailable);
+                }
+            });
+
+            if (!storeButtons.childElementCount) {
+                storeButtons.appendChild(makeElement('span', 'disabled-label', 'Store links will appear here when published.'));
+            }
+            download.appendChild(storeButtons);
+            card.appendChild(download);
+            return card;
+        });
+
+        if (cards.length) grid.replaceChildren.apply(grid, cards);
+    } catch (error) {
+        // Keep the embedded cards as a graceful fallback if the catalogue is offline.
+        console.warn('Quantum Softwares app catalogue could not be refreshed:', error);
+    }
+})();
+</script>
+
 </body>
 </html>
