@@ -1,0 +1,62 @@
+[
+  {
+    "id": "quantum-ai-speech-to-text",
+    "name": "Quantum AI: Speech to Text",
+    "category": "PRODUCTIVITY · AI",
+    "description": "Transform speech into accurate text and translate languages using AI-powered transcription technology. Designed for fast, practical voice-to-text workflows.",
+    "icon": "applogo 114x114.png",
+    "status": "Available",
+    "features": [
+      "AI Transcription",
+      "Translation",
+      "Offline Support"
+    ],
+    "stores": [
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B0HFQMCSQ6",
+        "available": true
+      },
+      {
+        "name": "Google Play",
+        "available": false,
+        "note": "Coming soon"
+      },
+      {
+        "name": "APK",
+        "url": "https://apkpure.com/p/com.quantumtools.transcribeassistance",
+        "available": true
+      }
+    ]
+  },
+  {
+    "id": "quantum-music",
+    "name": "Quantum Music",
+    "category": "MUSIC · MEDIA",
+    "description": "A streamlined music utility designed around a fast, clean and modern listening experience.",
+    "icon": "Music app Icon.png",
+    "status": "Available",
+    "features": [
+      "Music",
+      "Fast",
+      "Simple"
+    ],
+    "stores": [
+      {
+        "name": "Google Play",
+        "available": false,
+        "note": "Coming soon"
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B0HNJ1MXJV",
+        "available": true
+      },
+      {
+        "name": "APK",
+        "available": false,
+        "note": "Not available yet"
+      }
+    ]
+  }
+]
