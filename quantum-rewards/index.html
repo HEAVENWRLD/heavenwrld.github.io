@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Official publisher information for Quantum Rewards, an Android rewards app by QuantumSoftwares.">
+  <meta name="robots" content="index,follow">
+  <title>Quantum Rewards — QuantumSoftwares</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #070b16;
+      --panel: rgba(15, 24, 43, .82);
+      --line: rgba(133, 170, 220, .18);
+      --text: #eff6ff;
+      --muted: #a8b7ce;
+      --cyan: #67e8f9;
+      --blue: #60a5fa;
+      --violet: #a78bfa;
+      --green: #86efac;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--text);
+      background:
+        radial-gradient(ellipse at 12% 0%, rgba(34, 211, 238, .14), transparent 35rem),
+        radial-gradient(ellipse at 90% 15%, rgba(139, 92, 246, .15), transparent 32rem),
+        var(--bg);
+      font: 16px/1.7 Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    a { color: var(--cyan); text-underline-offset: 3px; }
+    a:hover { color: #fff; }
+    .top {
+      position: sticky; top: 0; z-index: 5;
+      border-bottom: 1px solid var(--line);
+      background: rgba(7, 11, 22, .82);
+      backdrop-filter: blur(16px);
+    }
+    .nav, main, footer { width: min(1080px, calc(100% - 36px)); margin: 0 auto; }
+    .nav { min-height: 68px; display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+    .brand { display: flex; align-items: center; gap: 11px; color: var(--text); text-decoration: none; font-weight: 800; letter-spacing: .04em; }
+    .mark {
+      width: 36px; height: 36px; display: grid; place-items: center; border-radius: 12px;
+      color: #06111e; font-weight: 950;
+      background: linear-gradient(135deg, var(--cyan), var(--blue), var(--violet));
+      box-shadow: 0 0 24px rgba(34, 211, 238, .22);
+    }
+    .nav a:last-child { color: var(--muted); font-size: .9rem; text-decoration: none; }
+    main { padding: 60px 0 76px; }
+    .hero {
+      position: relative; overflow: hidden; padding: clamp(28px, 6vw, 66px);
+      border: 1px solid rgba(103, 232, 249, .22); border-radius: 30px;
+      background: linear-gradient(135deg, rgba(13, 27, 48, .96), rgba(22, 18, 48, .9));
+      box-shadow: 0 28px 90px rgba(0,0,0,.28);
+    }
+    .hero:after {
+      content: ""; position: absolute; width: 280px; height: 280px; right: -100px; top: -120px;
+      border: 1px solid rgba(103, 232, 249, .24); border-radius: 50%;
+      box-shadow: 0 0 0 26px rgba(103,232,249,.025), 0 0 0 56px rgba(167,139,250,.025);
+      pointer-events: none;
+    }
+    .eyebrow { color: var(--cyan); font-size: .75rem; font-weight: 850; letter-spacing: .17em; text-transform: uppercase; }
+    h1 { max-width: 760px; margin: 14px 0 18px; font-size: clamp(2.5rem, 7vw, 5rem); line-height: 1.02; letter-spacing: -.055em; }
+    .gradient { color: transparent; background: linear-gradient(100deg, #fff, #8defff 48%, #c4b5fd); background-clip: text; -webkit-background-clip: text; }
+    .lead { max-width: 720px; color: #c0cee2; font-size: clamp(1.02rem, 2vw, 1.2rem); }
+    .chips { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 27px; }
+    .chip { padding: 7px 12px; border: 1px solid var(--line); border-radius: 999px; color: #dce9fb; background: rgba(3, 10, 22, .32); font-size: .82rem; }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 20px; }
+    .card { min-width: 0; padding: 25px; border: 1px solid var(--line); border-radius: 22px; background: var(--panel); }
+    .card h2 { margin: 0 0 11px; font-size: 1.23rem; letter-spacing: -.025em; }
+    .card p, .card li { color: var(--muted); }
+    .card p:last-child { margin-bottom: 0; }
+    ol, ul { padding-left: 22px; margin: 10px 0 0; }
+    li { padding: 4px 0; }
+    .wide { grid-column: 1 / -1; }
+    .providers { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 10px; margin-top: 16px; }
+    .provider { padding: 15px; border: 1px solid var(--line); border-radius: 15px; background: rgba(255,255,255,.025); }
+    .provider strong { display: block; }
+    .provider span { color: var(--muted); font-size: .83rem; }
+    .note { padding: 16px 18px; border-left: 3px solid var(--cyan); border-radius: 0 13px 13px 0; background: rgba(103,232,249,.06); color: #c4d5e9; }
+    .contact { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px; }
+    .contact p { margin: 0; }
+    footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; padding: 24px 0 36px; border-top: 1px solid var(--line); color: #8293ad; font-size: .88rem; }
+    footer a { color: #b6c6dc; text-decoration: none; }
+    @media (max-width: 720px) {
+      main { padding-top: 26px; }
+      .grid, .providers { grid-template-columns: 1fr; }
+      .wide { grid-column: auto; }
+      .hero { border-radius: 23px; }
+      .card { padding: 21px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+  <header class="top">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="/">
+        <span class="mark" aria-hidden="true">Q</span>
+        <span>QUANTUMSOFTWARES</span>
+      </a>
+      <a href="/">Developer website</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow">Android application · Publisher information</div>
+      <h1><span class="gradient">Quantum Rewards</span></h1>
+      <p class="lead">
+        Quantum Rewards is an Android rewards application by QuantumSoftwares.
+        It brings a QPoints balance together with eligible in-app activities and
+        partner offers, giving users one place to track rewards earned in the app.
+      </p>
+      <div class="chips">
+        <span class="chip">Android</span>
+        <span class="chip">QPoints rewards</span>
+        <span class="chip">Partner offers</span>
+        <span class="chip">Publisher: QuantumSoftwares</span>
+      </div>
+    </section>
+
+    <section class="grid" aria-label="Application information">
+      <article class="card">
+        <h2>How rewards work</h2>
+        <ol>
+          <li>Users open an available activity or partner offer in Quantum Rewards.</li>
+          <li>They review the offer requirements and complete the advertiser's instructions.</li>
+          <li>The partner verifies the completion and sends a transaction notification to our rewards service.</li>
+          <li>Eligible QPoints are added to the user's in-app balance after a valid confirmation.</li>
+        </ol>
+      </article>
+
+      <article class="card">
+        <h2>QPoints</h2>
+        <p>
+          QPoints are the virtual rewards units used inside Quantum Rewards.
+          The app displays the user's balance and the in-app uses currently
+          available to that account.
+        </p>
+        <p>
+          Reward amounts, eligibility, completion checks and approval times can
+          vary by offer, advertiser, provider, device and country.
+        </p>
+      </article>
+
+      <article class="card wide">
+        <h2>Partner offer providers</h2>
+        <p>
+          Quantum Rewards is preparing integrations with the following offerwall
+          providers. Offer availability depends on provider approval, active
+          campaigns and each user's eligibility.
+        </p>
+        <div class="providers">
+          <div class="provider"><strong>Offery</strong><span>Partner offers and rewarded activities</span></div>
+          <div class="provider"><strong>Notik</strong><span>Mobile offerwall and in-app campaigns</span></div>
+          <div class="provider"><strong>Offerwall.me</strong><span>Offers, tasks and other reward activities</span></div>
+        </div>
+      </article>
+
+      <article class="card wide">
+        <h2>Offer verification and reward integrity</h2>
+        <p>
+          Offers are supplied and measured by independent advertising partners.
+          QuantumSoftwares uses provider transaction notifications to reconcile
+          completed offers and QPoints. Duplicate, invalid, reversed or
+          unconfirmed transactions are not credited as successful completions.
+        </p>
+        <div class="note">
+          Completing an offer does not guarantee an immediate reward. The
+          provider and advertiser determine whether their completion conditions
+          have been met.
+        </div>
+      </article>
+
+      <article class="card wide">
+        <h2>Privacy and third-party services</h2>
+        <p>
+          When a user chooses to open a partner offerwall, the provider may
+          process information needed to present, measure and validate offers.
+          Depending on the provider and campaign, this can include a publisher
+          user identifier, IP address, country, device and operating-system
+          information, advertising identifiers where available, and offer
+          interaction or completion events.
+        </p>
+        <p>
+          Providers process information under their own privacy terms. QuantumSoftwares
+          receives the transaction information needed to attribute valid
+          completions and maintain the QPoints ledger. Please review our
+          <a href="/privacy-policy.html">Privacy Policy</a> for the developer's
+          broader privacy information.
+        </p>
+      </article>
+
+      <article class="card wide contact">
+        <div>
+          <h2>Publisher and support contact</h2>
+          <p>QuantumSoftwares · Developer support</p>
+        </div>
+        <a href="mailto:quantumsoftwares9@gmail.com">quantumsoftwares9@gmail.com</a>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <span>© 2026 QuantumSoftwares · Quantum Rewards</span>
+    <span><a href="/">Developer website</a> · <a href="/privacy-policy.html">Privacy Policy</a></span>
+  </footer>
+</body>
+</html>
